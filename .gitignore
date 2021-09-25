@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ConfigData (db auth, passowrd, api keys, etc)
+*_configdata.py
+
+# vscode settings
+.vscode
