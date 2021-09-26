@@ -14,6 +14,10 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
+from views.users import users
+
+app.register_blueprint(users)
+
 
 @app.route("/")
 def index():

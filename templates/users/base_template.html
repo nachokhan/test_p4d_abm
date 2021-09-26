@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{% block bar_title %}{% endblock %}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="{{ url_for('.static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('.static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('.static', filename='css/login_util.css') }}" rel="stylesheet">
+	<link href="{{ url_for('.static', filename='css/login_main.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="limiter" style="background-color: rgb(230, 230, 230)">
+		<div class="container-login100">
+			<div class="wrap-login100">
+
+				{% if error != None  %}
+				<p style="color:red">{{ error }}</p>
+				{% endif %}
+
+				<form class="login100-form flex-sb flex-w" action="" method="post" novalidate>
+					{{ form.hidden_tag() }}
+					<span class="login100-form-title p-b-32" style="margin-left: 5%;">
+						{% block title %}{% endblock %}
+					</span>
+
+					{% block content %}{% endblock %}
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="{{ url_for('.static', filename='js/jquery.min.js') }}"></script>
+	<script src="{{ url_for('.static', filename='js/jquery-migrate.min.js') }}"></script>
+	<script src="{{ url_for('.static', filename='js/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('.static', filename='js/bootstrap.bundle.min.js') }}"></script>
+	<script src="{{ url_for('.static', filename='js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('.static', filename='js/popper.js') }}"></script>
+
+	<script src="{{ url_for('.static', filename='js/login_main.js') }}"></script>
+</body>
+
+</html>
