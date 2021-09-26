@@ -1,0 +1,20 @@
+version: '3.3'
+
+services:
+
+  db:
+    container_name: pg_container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: pix4d_test
+    ports:
+      - "5432:5432"
+    volumes:
+      - $HOME/Desktop/PostgreSql-Snippets/infile:/infile
+      - pg_data:/var/lib/postgresql/data/
+
+volumes:
+  pg_data:
