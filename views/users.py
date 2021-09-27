@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_login import LoginManager, current_user, login_user, logout_user
-from flask_user import UserManager, login_required, roles_required
+from flask_user import UserManager, login_required
 from flask import redirect, render_template, url_for, request
 from werkzeug.urls import url_parse
 
@@ -74,25 +74,6 @@ def login():
 
         error = "Either user or password are incorrect"
     return render_template("login.html", form=form, error=error)
-
-
-@users.route("/soloadmin")
-@roles_required('Admin')
-def soloadmin():
-    return "Se ve que sos admin!!!"
-
-
-@users.route("/solosupport")
-@roles_required(['Admin', 'Support'])
-def solosupport():
-    return "Se ve que sos admin o support!!!"
-
-
-@users.route("/registrado")
-@login_required
-def registrado():
-    return "Se ve que sos registrado!!!"
-
 
 
 @users.route("/signup", methods=["GET", "POST"])
