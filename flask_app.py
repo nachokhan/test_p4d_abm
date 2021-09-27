@@ -18,9 +18,9 @@ app.config['USER_APP_NAME'] = "Pix4D Drones"
 
 db = SQLAlchemy(app)
 
-from views.home import home
-from views.users import users
-from views.drones import drones
+from app.views.home import home
+from app.views.users import users
+from app.views.drones import drones
 
 app.register_blueprint(home)
 app.register_blueprint(users)

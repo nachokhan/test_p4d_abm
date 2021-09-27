@@ -4,7 +4,7 @@ from flask_login import login_required
 from flask_user import roles_required
 
 # Local imports
-from flask_app import db, app
+# from flask_app import db, app
 
 
 drones = Blueprint(

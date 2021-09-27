@@ -7,8 +7,8 @@ from werkzeug.urls import url_parse
 
 # LOCAL IMPORTS
 from flask_app import db, app
-from views.forms.users import LoginForm, SignupForm
-from models.user import User, Role
+from app.views.forms.users import LoginForm, SignupForm
+from app.models.user import User, Role
 
 
 login_manager = LoginManager(app)

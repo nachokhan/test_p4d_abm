@@ -2,7 +2,7 @@ from flask import Blueprint
 from flask import render_template
 
 # Local imports
-from flask_app import db, app
+# from flask_app import db, app
 
 
 home = Blueprint(
