@@ -32,7 +32,7 @@ def load_user(user_id):
 
 @users.route("/nthome", methods=["GET", "POST"])
 def not_implemented_home():
-    return "<h1>Entraste a esta página porque aún no has definido una págiuna HOME</h1>"
+    return "<h1>Nacho, don't fforget to set a HOME page.</h1>"
 
 
 @users.route("/login", methods=["GET", "POST"])
@@ -115,7 +115,6 @@ def signup():
 
 
 @users.route("/logout")
-@login_required
 def logout():
     logout_user()
     return redirect(url_for("users.login"))

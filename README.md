@@ -20,9 +20,6 @@ psql -h pg_container_pix4d_test -d pix4d_test -U root
 #### Dump the data file in the dB
 psql -h pg_container_pix4d_test -d pix4d_test -U root -f infile
 
-
-
-
 # DATABASE 
 ## Connect to the database
 ### Enter the container's bash.
@@ -31,11 +28,6 @@ sudo docker exec -it pg_container_pix4d_test bash
 psql -h pg_container_pix4d_test -d pix4d_test -U root
 ### Dump the data file in the dB
 psql -h pg_container_pix4d_test -d pix4d_test -U root -f infile
-
-
-
-
-
 
 
 # Usefull commands

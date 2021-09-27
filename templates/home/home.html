@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block bar_title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{{ url_for('.static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('.static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('.static', filename='css/login_util.css') }}" rel="stylesheet">
+    <link href="{{ url_for('.static', filename='css/login_main.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="limiter" style="background-color: rgb(230, 230, 230)">
+        <div style="align-items: center; justify-content: center;">
+            <h1>Welcome!</h1>
+
+            <a href="{{ url_for('drones.list_drones')}}">DRONES</a>
+            </br>
+            <a href="{{ url_for('drones.add_drone')}}">ADD DRONE</a>
+
+        </div>
+
+    </div>
+</body>
