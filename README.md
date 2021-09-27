@@ -51,6 +51,7 @@ sudo docker rm <id>
 
 ## BASH
 ### Check open port
-sudo lsof -i -P | grep ':5432 '  (1 = Closed, 0=Opened)
+sudo lsof -i -P | grep ':5432 '  
+Answer means: (1 = Closed, 0=Opened)
 ### Close port
 sudo kill <pid>

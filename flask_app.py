@@ -10,6 +10,7 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "7110d8ae50b23a5d1616bf329bc298105da20fe"
 app.config["SQLALCHEMY_DATABASE_URI"] = SQL_CONNECTION_STRING
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config['USER_ENABLE_EMAIL'] = False
 
 
 db = SQLAlchemy(app)
